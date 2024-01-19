@@ -179,18 +179,18 @@ We want to be able to choose which Load Balancer to use, Nginx or Apache, so we 
 
 Now you can make use of `env-vars\uat.yml` file to define which loadbalancer to use in UAT environment by setting respective environmental variable to true.
 
-You will activate load balancer, and enable `nginx` by setting these in the respective environment’s env-vars file.
+You will activate load balancer, and enable `apache` by setting these in the respective environment’s env-vars file.
 
 ```
-enable_nginx_lb: true
+enable_apache_lb: true
 load_balancer_is_required: true
 ```
 
-![image](images/Screenshot_16.png)
+![image](images/Screenshot_29.png)
 
-The same must work with `apache` LB, so you can switch it by setting respective environmental variable to true and other to `false.`
+The same must work with `nginx` LB, so you can switch it by setting respective environmental variable to true and other to `false.`
 
-![image](images/Screenshot_15.png)
+![image](images/Screenshot_28.png)
 
 
 Run Playbook using:
@@ -201,5 +201,9 @@ ansible-playbook -i inventory/uat.yml playbooks/site.yml
 ```
 
 ![image](images/Screenshot_24.png)
+
+
+![image](images/Screenshot_25.png)
+
 
 
